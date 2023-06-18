@@ -1,0 +1,16 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exibe CEP</title>
+</head>
+<body>
+
+	<h1>Olá</h1>
+	<input type="text" class="form-control" th:value="${endereco.bairro}" id="bairro" name="bairro" /></br>
+	<label th:text="${endereco.logradouro}"></label></br>
+	<select th:field="*{endereco}">
+		<option th:value="'x'" th:text="${endereco.localidade}"></option>
+	</select>
+</body>
+</html>

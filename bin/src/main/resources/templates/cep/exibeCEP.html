@@ -1,0 +1,13 @@
+<html>
+
+  <body>
+  
+    <h1>Olá</h1>
+  	<input type="text" class="form-control" th:value="${endereco.bairro}" id="bairro" name="bairro" /></br>
+  	<label th:text="${endereco.logradouro}"></label></br>
+  	<select th:field="*{endereco}">
+	    <option th:value="'x'" th:text="${endereco.localidade}"></option>
+	</select>
+  </body>
+
+</html>

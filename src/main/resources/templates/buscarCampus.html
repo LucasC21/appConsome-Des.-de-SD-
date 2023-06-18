@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Buscar aluno</title>
+	<link th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body>
+
+	<div th:insert="~{menuAlunos :: menu}"></div>
+
+	<div class="card" style="margin-top:48px">
+
+		<h1 class="card-header text-center font-weight-bold text-uppercase py-4">Buscar por campus</h1>
+
+		<div class="card-body">
+
+			<form class="form-horizontal" method="GET" th:action="@{/buscarPorCampus}">
+				<div class="card">
+					<div class="card-body">
+						<div class="form-group row">
+							<label class="col-sm-2 col-form-label" for="campus">Campus:</label>
+							<div class="col-sm-9">
+								<input class="form-control" type="text" th:value="${campus}" name="campus" id="campus">
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="offset-sm-2 col-sm-10">
+							<a href="/index" class="btn btn-secondary">Voltar</a>
+							<input class="btn btn-primary" type="submit" value="Buscar">
+						</div>
+					</div>
+
+				</div>
+		</div>
+		</form>
+
+	</div>
+	</div>
+</body>
+
+</html>
